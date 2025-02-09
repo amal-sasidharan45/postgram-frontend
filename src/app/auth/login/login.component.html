@@ -1,0 +1,93 @@
+<!-- Section: Design Block -->
+
+
+
+<section class="section">
+
+  <!-- Jumbotron -->
+  <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+    <div class="container">
+      <div class="row gx-lg-5 align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <h1 class="my-5 display-3 fw-bold ls-tight">
+            Share your story with the world. <br />
+            <span style="color: #006990;">Postgram</span>
+          </h1>
+          <p style="color: hsl(217, 10%, 50.8%)">
+            A platform to express, inspire, and connect.  
+            Your moments, your voice, your Postgram.
+          </p>
+        </div>
+
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="card">
+            <div class="card-body py-5 px-md-5">
+            
+<div class="form-container" >
+  <p class="title">Log In</p>
+  <form class="form" #Loginform="ngForm" (submit)="OnLogin(Loginform)">
+    <div class="input-group">
+      <label for="username">Email</label>
+      <input type="text" matInput name="username"  ngModel #usernameInput="ngModel" email required  id="username" placeholder="" />
+      <mat-error *ngIf="usernameInput.invalid && (usernameInput.touched || Loginform.submitted)">
+        Please enter a valid Email address
+      </mat-error>
+          </div>
+    <div class="input-group">
+      <label for="password">Password</label>
+      <input type="password" matInput ngModel  #passwordInput="ngModel" password required name="password" id="password" placeholder="" />
+      <mat-error *ngIf="passwordInput.invalid && (passwordInput.touched || Loginform.submitted)">
+        Please enter a Password
+      </mat-error>
+      
+      <div class="forgot">
+        <!-- <a rel="noopener noreferrer" href="#">Forgot Password ?</a> -->
+      </div>
+    </div>
+    <button class="sign mt-5"> Log In</button>
+  </form>
+  <div class="social-message">
+    <div class="line"></div>
+    <!-- <p class="message">Login with social accounts</p> -->
+    <div class="line"></div>
+  </div>
+  <div class="social-icons">
+    <button aria-label="Log in with Google" class="icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 32 32"
+        class="w-5 h-5 fill-current"
+      ></svg>
+    </button>
+    <button aria-label="Log in with Twitter" class="icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 32 32"
+        class="w-5 h-5 fill-current"
+      ></svg>
+    </button>
+    <button aria-label="Log in with GitHub" class="icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 32 32"
+        class="w-5 h-5 fill-current"
+      ></svg>
+    </button>
+  </div>
+  <p class="signup">
+    Don't have an account?
+    <a rel="noopener noreferrer" routerLink="/sign-up"
+    routerLinkActive="activebutton"
+    ariaCurrentWhenActive="page">Sign up</a>
+  </p>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Jumbotron -->
+</section>
+<!-- Section: Design Block -->
