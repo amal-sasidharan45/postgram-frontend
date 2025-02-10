@@ -66,6 +66,16 @@ export class PostListComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    history.pushState(null, '', window.location.href);
+
+    // Listen for the popstate event
+    window.onpopstate = (event) => {
+      // Prevent navigation by pushing the state again
+      history.pushState(null, '', window.location.href);
+     // alert('Back button is disabled');
+    };
+  
+
     this.show = true;
     this.CommentForm = new FormGroup({
       comment: new FormControl('', {

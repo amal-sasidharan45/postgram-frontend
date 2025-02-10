@@ -109,7 +109,7 @@ body{
     transition: all 0.2s ease;
 }
 .sub-section i{
-    font-size: 1.3rem;
+    font-size: 2rem;
     color: var(--font-color);
     transition: all 0.2s ease;
     
@@ -414,7 +414,7 @@ body{
 }
 .comments{
     margin-block: 5px;
-    font-size: 0.8rem;
+    /* font-size: 0.8rem; */
     color: var(--secod-font-color);
     cursor: pointer;
 }

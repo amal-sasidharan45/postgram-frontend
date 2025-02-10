@@ -251,6 +251,7 @@ export class PostCreateComponent implements OnInit {
         next: (data: any) => {
           console.log('Post updated successfully', data);
           this.closeModal();
+          this.PostLikes=[]
         },
         error: (err) => {
           console.error('Error:', err);

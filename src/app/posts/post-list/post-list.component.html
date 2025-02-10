@@ -22,8 +22,8 @@
     </div>
     
       <div class="sub-section"  (click)="openTemplate(Postcreate)">
-        <i class="fa-solid fa-square-plus"></i>
-        <a>Create</a>
+        <i class="fa-solid fa-square-plus fa-xl"></i>
+                <a>Create</a>
       </div>
       <div class="sub-section" (click)="Create()"  >
       
@@ -78,15 +78,15 @@
             <div class="post-footer-left">
               <div class="group relative inline-block">
                 <div class="flex items-center space-x-4">
-                  <div class="like-button flex items-center space-x-2">
+                  <div class="like-button flex items-center space-x-2 ms-4">
                     <label class="like text-sm font-normal" for="heart-{{ i }}" (click)="toggleLike(i, post)">
                       <i
                         class="fa-solid fa-heart like-icon"
                         [class.filled]="likedPosts[i]"
                         [class.unfilled]="!likedPosts[i]"
                       ></i>
-                      <span class="like-text">
-                        <span class="like-text">
+                      <span class="like-text ">
+                        <span class=" font-os text-md font-bold">
                           {{ countLikes(post.likes) }} {{ countLikes(post.likes) > 1 ? 'Likes' : 'Like' }}
                         </span>
                         
@@ -101,7 +101,7 @@
   (click)="toggleComments(i,post)"
   
 
-              class="px-4 py-2  cursor-pointer">
+              class="px-4 py-2  font-os text-lg font-bold cursor-pointer">
     <i class="fa-regular fa-comment"></i> Comments
   </a>
    
@@ -183,7 +183,7 @@
             
             
           
-           <div class="post-description">
+           <div class="post-description ms-3">
                  
                   <p class="title"><span>
                       {{post.userName}} </span>{{post.caption}}
