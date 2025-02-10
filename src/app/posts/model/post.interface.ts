@@ -3,7 +3,14 @@ export interface PostLike {
   creator: string;
   isLiked: boolean;
 }
+export function emptyLikes(): PostLike {
+  return {
+    id: '',
+    creator: '',
+    isLiked: false
 
+  }
+}
 export interface Posts {
   id: string;
   caption: string;

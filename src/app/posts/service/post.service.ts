@@ -40,10 +40,10 @@ private PostUpdated=new Subject<{posts:Posts[]}>()
     return this.PostUpdated.asObservable();
   }
   getPostsForprofile(){
-    return this.http.get<{message:string,posts:any}>(environment.apiUrl + 'Posts'  +'/profile-image')
+    return this.http.get<{message:string,posts:any}>(this.BACKEND_URL  +'/profile-image')
   }
   getAllPosts(){
-    return this.http.get<{message:string,posts:any}>(environment.apiUrl + 'Posts').pipe(
+    return this.http.get<{message:string,posts:any}>(this.BACKEND_URL).pipe(
       map((postData)=>{
         return {posts:postData.posts.map((posts:any)=>{
           console.log(posts);
@@ -112,7 +112,9 @@ private PostUpdated=new Subject<{posts:Posts[]}>()
       postData
     );
   }
-  
+  getHealth(){
+    return this.http.get(`${this.BACKEND_URL}health`)
+  }
 
    deletePost(postId:string){
     return this.http.delete(`${this.BACKEND_URL}${postId}`);

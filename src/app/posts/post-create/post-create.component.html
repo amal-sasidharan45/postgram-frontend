@@ -132,14 +132,17 @@
 	  <div class="row mt-5">
 		<div class="col-md-4 border-right">
 			<div class="d-flex flex-column align-items-center text-center p-3 py-5">
-				<img *ngIf="ImagePreview" class="rounded-circle mt-5" [src]="ImagePreview" width="150" height="150" >
+				<!-- <img *ngIf="ImagePreview" class="rounded-circle mt-5" [src]="ImagePreview" width="150" height="150" > -->
 				<img *ngIf="!ImagePreview" class="rounded-circle mt-5" src="../../../assets/user.png" width="150" height="150">
-
+				<div class="rounded-full  h-44 w-44  bg-gray-200 flex items-center justify-center overflow-hidden">
+					<img [src]="ImagePreview" alt="profilepic" class="h-full w-full object-cover">
+				  </div>
 				<span class="font-weight-bold mt-3">
 				  <!-- Hidden file input -->
 				  <input 
 					class="title" 
 					type="file"  
+					accept=".jpg, .jpeg, .png"
 					#filePicker 
 					(change)="OnPickedImg($event)" 
 					style="display: none;" 
@@ -240,7 +243,7 @@
 	
 	</div>
 	<label class="custom-file-upload">
-	  <input class="title" type="file"   #filePicker
+	  <input class="title" type="file"  accept=".jpg, .jpeg, .png"  #filePicker
   
 	  (change)="OnPickedImgEdit($event)" />
 	  Choose an Image
