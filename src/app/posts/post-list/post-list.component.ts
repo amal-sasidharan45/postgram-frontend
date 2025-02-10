@@ -87,7 +87,7 @@ export class PostListComponent implements OnInit, OnDestroy {
     this.postService.getAllPosts();
 
     this.getAllData();
-    this.startHealthCheck();
+    // this.startHealthCheck();
   }
 
 

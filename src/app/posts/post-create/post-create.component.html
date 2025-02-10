@@ -9,12 +9,12 @@
 	
 		<div class="profile">
 			<div class="profile-image" *ngIf="!Profile.imagePath">
-				<img src="../../../assets/user.png" alt="User Image" class="rounded-full  h-52 w-52 object-cover border border-gray-300" />
+				<img src="../../../assets/user.png"  class="rounded-full  h-52 w-52 object-cover border border-gray-300" />
 			  </div>
 			  
 			  <div class="profile-image" *ngIf="Profile.imagePath">
 				<div class="rounded-full  h-52 w-52  bg-gray-200 flex items-center justify-center overflow-hidden">
-					<img [src]="Profile.imagePath" alt="profilepic" class="h-full w-full object-cover">
+					<img [src]="Profile.imagePath"  class="h-full w-full object-cover">
 				  </div>
 								</div>
 			  
@@ -62,7 +62,7 @@
 			<div class="w-full flex justify-between">
 			  <div class="flex">
 				<div class="rounded-full h-8 w-8 bg-gray-500 flex items-center justify-center overflow-hidden">
-					<img [src]="Profile.imagePath" alt="profilepic" class="h-full w-full object-cover">
+					<img [src]="Profile.imagePath"  class="h-full w-full object-cover">
 				  </div>
 				  
 				<span class="pt-1 ml-2 font-bold text-sm">{{image.userName}}</span>
@@ -135,7 +135,7 @@
 				<!-- <img *ngIf="ImagePreview" class="rounded-circle mt-5" [src]="ImagePreview" width="150" height="150" > -->
 				<img *ngIf="!ImagePreview" class="rounded-circle mt-5" src="../../../assets/user.png" width="150" height="150">
 				<div class="rounded-full  h-44 w-44  bg-gray-200 flex items-center justify-center overflow-hidden">
-					<img [src]="ImagePreview" alt="profilepic" class="h-full w-full object-cover">
+					<img [src]="ImagePreview"  class="h-full w-full object-cover">
 				  </div>
 				<span class="font-weight-bold mt-3">
 				  <!-- Hidden file input -->
@@ -239,7 +239,7 @@
   <div class="upload">
 	<div class="folder" (click)="filePicker.click()">
 	  <!-- <div class="top"></div> -->
-	 <img src="../../../assets/img.png" width="60px" height="60px" alt="">
+	 <img src="../../../assets/img.png" width="60px" height="60px">
 	
 	</div>
 	<label class="custom-file-upload">

@@ -56,12 +56,12 @@
               <div class="post-main">
           <div class="post-header">
               <div class="post-left-header">
-               <div class="post-image" *ngIf="post.profilePicture">
-                <img  [src]="post?.profilePicture" alt="Post Image" />
+               <div class="rounded-full h-8 w-8 bg-gray-500 flex items-center justify-center overflow-hidden" *ngIf="post.profilePicture">
+                <img  [src]="post?.profilePicture" />
 
                </div>
                <div class="post-imgUser" *ngIf="!post.profilePicture">
-                <img  src="../../../assets/user.png" alt="Post Image" />
+                <img  src="../../../assets/user.png" />
 
                </div>
                <p class="post-username">
@@ -72,7 +72,7 @@
               <!-- <i class="fa-solid fa-grip-lines"></i> -->
            </div>
            <div class="post-main-image">
-            <img  [src]="post.imagePath" alt="Post Image" />
+            <img  [src]="post.imagePath" />
            </div>
            <div class="post-footer">
             <div class="post-footer-left">
@@ -172,7 +172,7 @@
                     <button
                       [disabled]="CommentForm.invalid"
                       type="submit"
-                      class="fa fa-paper-plane send-btn">
+                      class=" text-customColor fa fa-paper-plane send-btn">
                     </button>
                   </div>
                 </form>
@@ -328,7 +328,7 @@
           <div class="p-8 m-5">
             <!-- Logo and Heading -->
             <div class="text-center space-y-4">
-              <span class="name text-customColor"> <i class="fa-brands fa-squarespace"></i></span>
+              <span class="name text-customColor"> <i class="fa-brands fa-grav"></i></span>
               <h2 class="text-2xl font-bold text-gray-800">
                 Please Log In  
               
